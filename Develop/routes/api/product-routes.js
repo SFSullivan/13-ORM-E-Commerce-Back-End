@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
   Product.findAll({
     include: Category, Tag
   })
-    ,then(data => {
+    .then(data => {
       res.send(data)
     })
 });
