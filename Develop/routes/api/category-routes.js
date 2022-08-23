@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     include: Product
   })
     .then(data => {
-      res,send(data)
+      res.send(data)
     })
 });
 
@@ -32,7 +32,7 @@ router.post('/', (req, res) => {
   // create a new category
   Category.create(req.body)
   .then((product) => {
-    res.status(200).json('new categpry created');
+    res.status(200).json('new category created');
   })
   .then((categoryTagIds) => res.status(200).json(categoryTagIds))
   .catch((err) => {
